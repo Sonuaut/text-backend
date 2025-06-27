@@ -5,7 +5,7 @@ import categoriesRouter from './routes/categories.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 // Register products API
 app.use('/api/products', productsRouter);
